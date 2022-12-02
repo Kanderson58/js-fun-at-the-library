@@ -78,7 +78,7 @@ describe("library.js", function() {
   });
 
   describe("checkoutBook", function() {
-    skip("should unshelf a book to check out a book to a patron", function() {
+    it("should unshelf a book to check out a book to a patron", function() {
       var dracula = {
         title: "Dracula",
         mainCharacter: { name: "Count Dracula", age: undefined, pronouns: "he/him" },
@@ -114,7 +114,7 @@ describe("library.js", function() {
       assert.equal(result2, "You have now checked out Born a Crime from the Denver Public Library")
     });
 
-    skip("should only checkout a book if the book is on the shelves", function() {
+    it("should only checkout a book if the book is on the shelves", function() {
       var denverLibrary = createLibrary("Denver Public Library");
 
       var error1 = checkoutBook(denverLibrary, "The Fifth Season", "fantasy");
