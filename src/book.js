@@ -1,38 +1,38 @@
-function createTitle(title) {
-  return (`The ${title}`);
+function createTitle(bookTitle) {
+  return (`The ${bookTitle}`);
 }
 
-function buildMainCharacter (name, age, pronouns) {
+function buildMainCharacter (nameChar, ageChar, pronounsChar) {
   return {
-    name: name,
-    age: age,
-    pronouns: pronouns
+    name: nameChar,
+    age: ageChar,
+    pronouns: pronounsChar
   }
 }
 
 
-function saveReview (newReview, emptyArray) {
-  if (emptyArray.includes(newReview) === false) {
-  emptyArray.push(newReview);
+function saveReview (newReview, listOfReviews) {
+  if (listOfReviews.includes(newReview) === false) {
+    listOfReviews.push(newReview);
   }
 }
 
-function calculatePageCount (title) {
-  return title.length * 20
+function calculatePageCount (bookTitle) {
+  return bookTitle.length * 20;
 }
 
 
-function writeBook (title, mainCharacter, genre) {
+function writeBook (bookTitle, nameChar, bookGenre) {
   return book = {
-    title: title,
-    mainCharacter: mainCharacter,
-    genre: genre,
-    pageCount: calculatePageCount(title)
+    title: bookTitle,
+    mainCharacter: nameChar,
+    genre: bookGenre,
+    pageCount: calculatePageCount(bookTitle)
   }
 }
 
-function editBook (title) {
-  return title.pageCount *= .75
+function editBook (bookTitle) {
+  return bookTitle.pageCount *= .75;
 }
 
 module.exports = {
