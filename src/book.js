@@ -10,7 +10,6 @@ function buildMainCharacter (nameChar, ageChar, pronounsChar) {
   }
 }
 
-
 function saveReview (newReview, listOfReviews) {
   if (listOfReviews.includes(newReview) === false) {
     listOfReviews.push(newReview);
