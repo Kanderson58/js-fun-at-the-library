@@ -24,17 +24,18 @@ function listTitles (shelf) {
   return total
 }
 
-// function listTitles (shelf) {
-//   for (i = 0; i < shelf.length; i++) {
-//     var finalString = ""
-//     var result = finalString.concat(shelf.slice(i, i + 1), i)
-//   }
-//   return result
-// }
+function searchShelf (shelf, bookTitle) {
+  if (listTitles(shelf).includes(bookTitle)) {
+    return true
+  } else {
+    return false
+  }
+}
+
 
 module.exports = {
   shelfBook,
   unshelfBook,
   listTitles,
-  // searchShelf
+  searchShelf
 };
