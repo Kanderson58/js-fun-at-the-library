@@ -13,15 +13,11 @@ function unshelfBook (bookTitle, shelf) {
 }
 
 function listTitles (shelf) {
-  var total = ""
+  var total = []
     for (i = 0; i < shelf.length; i++) {
-     if (i < shelf.length - 1) {
-      total += shelf[i].title + ", ";
-    } else {
-      total += shelf[i].title;
+      total.push(shelf[i].title);
   }
-}
-  return total;
+  return total.join(", ");
 }
 
 function searchShelf (shelf, bookTitle) {

@@ -3,7 +3,7 @@ var Librarian = require('../src/Librarian.js');
 
 var {
   createLibrary, addBook
-} = require('../src/Library.js')
+} = require('../src/library.js')
 
 describe('Librarian (class)', function() {
   it('should instantiate a librarian object', function() {
